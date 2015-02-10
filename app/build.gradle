@@ -43,3 +43,9 @@ uploadArchives {
        }
     }
 }
+
+model {
+    tasks.generatePomFileForMavenCustomPublication {
+        destination = file("$buildDir/generated-pom.xml")
+    }
+}
