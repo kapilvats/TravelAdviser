@@ -30,7 +30,7 @@ dependencies {
 def apkFile = file('build/outputs/apk/app-debug.apk')
 
 artifacts {
-    archives file: file('build/outputs/apk/app-release-unaligned.apk'), name: 'my-artifact', type: 'apk'
+    archives file: file('build/outputs/apk/app-release-unsigned.apk'), name: 'my-artifact', type: 'apk'
     archives apkFile
 }
 
