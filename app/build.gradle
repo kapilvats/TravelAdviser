@@ -25,10 +25,18 @@ dependencies {
     compile 'com.android.support:appcompat-v7:21.0.3'
 }
 
-def apkFile = file('build/outputs/apk/app-debug.apk')
+
+
+task myTask(type:  apk) {
+    destFile = file('build/outputs/apk/app-debug.apk')
+}
 
 artifacts {
-    archives apkFile
+    archives(myTask.destFile) {
+        name 'my-artifact'
+        type 'apk'
+        builtBy myTask
+    }
 }
 
 uploadArchives {
