@@ -36,8 +36,8 @@ uploadArchives {
        mavenDeployer {
              repository(url: "http://54.169.72.142/nexus/content/repositories/snapshots")
              pom.version = "1.0-SNAPSHOT"
-             pom.artifactId = "simple-project"
-             pom.groupId = "com.example"
+             pom.artifactId = "androdi-project"
+             pom.groupId = "com.vats"
        }
     }
 }
