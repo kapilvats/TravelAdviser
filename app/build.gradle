@@ -27,16 +27,10 @@ dependencies {
 
 
 
-task myTask(type:  jar) {
-    destFile = file('build/outputs/apk/app-debug.apk')
-}
+def apkFile = file('build/outputs/apk/app-debug.apk')
 
 artifacts {
-    archives(myTask.destFile) {
-        name 'my-artifact'
-        type 'apk'
-        builtBy myTask
-    }
+    archives apkFile
 }
 
 uploadArchives {
@@ -44,10 +38,6 @@ uploadArchives {
        mavenDeployer {
              repository(url: "http://54.169.72.142/nexus/content/repositories/snapshots")
              println 'hello this is kapil'
-             println name
-             setUniqueVersion true
-             pom.artifactId = "androdi-project"
-             pom.groupId = "com.vats"
        }
     }
 }
