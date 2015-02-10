@@ -37,6 +37,7 @@ artifacts {
 uploadArchives {
     repositories {
        mavenDeployer {
+            configurePOM(pom)
              repository(url: "http://54.169.72.142/nexus/content/repositories/snapshots")
              println 'hello this is kapil'
        }
