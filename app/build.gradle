@@ -36,7 +36,7 @@ uploadArchives {
        mavenDeployer {
              repository(url: "http://54.169.72.142/nexus/content/repositories/snapshots")
              println 'hello this is kapil'
-             uniqueVersion true
+             setUniqueVersion true
              pom.artifactId = "androdi-project"
              pom.groupId = "com.vats"
        }
