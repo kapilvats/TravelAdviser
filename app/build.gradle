@@ -25,5 +25,7 @@ dependencies {
 }
 
 artifacts {
-    archives app-debug.apk
+    archives androidReleaseJar
+    archives androidSourcesJar
+    archives androidJavadocsJar
 }
