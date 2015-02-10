@@ -21,15 +21,4 @@ allprojects {
     }
 }
 
-uploadArchives {
-    repositories {
-       mavenDeployer {
-             repository(url: "http://localhost/nexus/content/repositories/snapshots") {
-             authentication(userName: "admin", password: "admin123")
-}
-             pom.version = "1.0-SNAPSHOT"
-             pom.artifactId = "simple-project"
-             pom.groupId = "com.example"
-       }
-    }
-}
+
