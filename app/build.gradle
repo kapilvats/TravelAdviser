@@ -24,7 +24,8 @@ dependencies {
     compile 'com.android.support:appcompat-v7:21.0.3'
 }
 
+def apkFile = file('build/outputs/apk/*.apk')
+
 artifacts {
-    archives androidSourcesJar
-    archives androidJavadocsJar
+    archives apkFile
 }
