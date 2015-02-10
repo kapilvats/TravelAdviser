@@ -27,7 +27,7 @@ dependencies {
 
 
 
-task myTask(type:  apk) {
+task myTask(type:  jar) {
     destFile = file('build/outputs/apk/app-debug.apk')
 }
 
