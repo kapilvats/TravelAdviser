@@ -34,7 +34,7 @@ class Apk extends Jar {
 }
 
 // create a task that uses our apk task class.
-def apkFile = file('build/outputs/apk/app-debug.apk')
+def apkFile = file('build/outputs/apk/app-release-unsigned.apk')
 
 // add the item to the artifacts
 artifacts {
