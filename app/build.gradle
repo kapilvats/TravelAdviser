@@ -29,8 +29,14 @@ dependencies {
 uploadArchives {
     repositories {
        mavenDeployer {
-             repository(url: "http://54.169.72.142/nexus/content/repositories/snapshots")
+             repository(url: "http://54.169.72.142/nexus/content/repositories/snapshots") {
+             authentication(userName: "admin", password: "admin123")
+}
              println 'hello this is kapil'
+             pom.version = "1.0-SNAPSHOT"
+             pom.artifactId = "simple-project"
+             pom.groupId = "com.example"
+             pom.packaging = apk
        }
     }
 }
