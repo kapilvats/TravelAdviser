@@ -58,7 +58,12 @@ uploadArchives {
 
         addFilter('debug') { artifact, file ->
             artifact.name.contains("debug")
-        }   
+        }
+        pom.project {
+                    name 'android-traveer'
+                    packaging 'com.helo'
+                    description 'test'
+                }
              
        }
     }
