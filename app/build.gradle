@@ -36,9 +36,14 @@ artifacts {
 uploadArchives {
     repositories {
        mavenDeployer {
-             repository(url: "http://54.169.72.142/nexus/content/repositories/snapshots") {
+             repository(url: "http://54.169.72.142/nexus/content/repositories/releases") {
              authentication(userName: "admin", password: "admin123")
-}
+        }
+         snapshotRepository(url: "http://54.169.72.142/nexus/content/repositories/snapshots") {
+        // values as variable names declared in ~/.gradle/gradle.properties
+        authentication(userName: "admin", password: "admin123")
+        } 
+
         addFilter('debug') { artifact, file ->
             artifact.name.contains("debug")
         }   
