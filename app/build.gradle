@@ -52,9 +52,10 @@ uploadArchives {
             authentication(userName: "admin", password: "admin123")
             }
 
-        addFilter('debug') { artifact, file ->
-            artifact.name.contains("debug")
+        addFilter('release') { artifact, file ->
+            artifact.name.contains('release')
         }
+            pom('release').version = 1.0
         pom.project {
                     name 'android-traveer'
                     packaging 'com.helo'
