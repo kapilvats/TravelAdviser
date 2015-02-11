@@ -26,13 +26,6 @@ dependencies {
 }
 
 
-
-def apkFile = file('build/outputs/apk/app-debug.apk')
-
-artifacts {
-    archives apkFile
-}
-
 uploadArchives {
     repositories {
        mavenDeployer {
