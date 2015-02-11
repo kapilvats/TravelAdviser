@@ -30,7 +30,6 @@ dependencies {
 def apkFile = file('build/outputs/apk/app-debug.apk')
 
 artifacts {
-    archives file: file('build/outputs/apk/app-release-unsigned.apk'), name: 'my-artifact', type: 'apk'
     archives apkFile
 }
 
@@ -40,11 +39,5 @@ uploadArchives {
              repository(url: "http://54.169.72.142/nexus/content/repositories/snapshots")
              println 'hello this is kapil'
        }
-    }
-}
-
-model {
-    tasks.generatePomFileForMavenCustomPublication {
-        destination = file("$buildDir/generated-pom.xml")
     }
 }
