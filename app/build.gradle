@@ -57,9 +57,9 @@ uploadArchives {
             artifact.name.contains("debug")
         }   
              println 'hello this is kapil'
-             pom.version "1.0-SNAPSHOT"
-             pom.artifactId "simple-project"
-             pom.groupId "com.example"
+             pom.version = "1.0-SNAPSHOT"
+             pom.artifactId = "simple-project"
+             pom.groupId = "com.example"
        }
     }
 }
