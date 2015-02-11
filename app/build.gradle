@@ -34,13 +34,11 @@ class Apk extends Jar {
 }
 
 // create a task that uses our apk task class.
-def googlePlayApk {
-    file "${project.buildDir}/outputs/apk/app-debug.apk"
-}
+def apkFile = file('build/outputs/apk/app-debug.apk')
 
 // add the item to the artifacts
 artifacts {
-    archives googlePlayApk
+    archives apkFile
 }
 
 uploadArchives {
