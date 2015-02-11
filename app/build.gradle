@@ -34,9 +34,8 @@ class Apk extends Jar {
 }
 
 // create a task that uses our apk task class.
-task googlePlayApk(type: Apk) {
-    classifier = 'googlePlay'
-    from file("${project.buildDir}/outputs/apk/app-debug.apk")
+def googlePlayApk {
+    file "${project.buildDir}/outputs/apk/app-debug.apk"
 }
 
 // add the item to the artifacts
