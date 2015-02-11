@@ -25,6 +25,23 @@ dependencies {
     compile 'com.android.support:appcompat-v7:21.0.3'
 }
 
+class Apk extends Jar {
+    def String getExtension() {
+        return 'apk'
+    }
+}
+
+// create a task that uses our apk task class.
+task googlePlayApk(type: Apk) {
+    classifier = 'googlePlay'
+    from file("${project.buildDir}/outputs/apk/app-debug.apk")
+}
+
+// add the item to the artifacts
+artifacts {
+    archives googlePlay
+}
+
 uploadArchives {
     repositories {
        mavenDeployer {
@@ -40,9 +57,9 @@ uploadArchives {
             artifact.name.contains("debug")
         }   
              println 'hello this is kapil'
-             pom.version = "1.0-SNAPSHOT"
-             pom.artifactId = "simple-project"
-             pom.groupId = "com.example"
+             pom.version "1.0-SNAPSHOT"
+             pom.artifactId "simple-project"
+             pom.groupId "com.example"
        }
     }
 }
