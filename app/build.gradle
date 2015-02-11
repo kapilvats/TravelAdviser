@@ -39,7 +39,7 @@ task googlePlayApk(type: Apk) {
 
 // add the item to the artifacts
 artifacts {
-    archives googlePlay
+    archives googlePlayApk
 }
 
 uploadArchives {
