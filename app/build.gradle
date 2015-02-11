@@ -45,7 +45,7 @@ uploadArchives {
     repositories {
        mavenDeployer {
             println 'hello this is kapil'
-             pom.version = "1.0-SNAPSHOT"
+             pom.version = "1.0"
              pom.artifactId = "simple-project"
              pom.groupId = "com.example"
              repository(url: "http://54.169.72.142/nexus/content/repositories/releases") {
