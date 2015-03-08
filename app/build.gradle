@@ -85,3 +85,24 @@ sonarRunner {
 }
 
 
+sonarRunner{
+    sonarProperties{
+        property "sonar.host.url", "http://localhost:9000/"
+        property "sonar.jdbc.url", "jdbc:mysql://localhost:3306/sonar?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true&useConfigs=maxPerformance"
+        property "sonar.jdbc.driverClassName", "com.mysql.jdbc.Driver"
+        property "sonar.jdbc.username", "sonar"
+        property "sonar.jdbc.password", "sonar"
+        property "sonar.projectKey", "com.vats.myapp"
+        property "sonar.projectName", "MyAppp"
+        property "sonar.projectVersion", "1.0"
+        property "sonar.aditional.languages", "js"
+        property "sonar.javascript.sources", "src/main/assets"
+        property "sonar.binaries", "build/intermediates/classes/debug"
+        property "sonar.sources", "src/main/java,src/main/assets"
+        property "sonar.tests", "src/test/java"
+        property "sonar.junit.reportsPath", "build/test-results/debug"
+        property "sonar.java.coveragePlugin", "jacoco"
+        property "sonar.jacoco.reportPath","build/jacoco/testDebug.exec"
+    }
+}
+
